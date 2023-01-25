@@ -1,5 +1,5 @@
 [Unit]
-Description=Mozilla WebThings Gateway Wifi Setup
+Description=VectorX Wifi Setup
 After=network.target
 
 [Service]
@@ -8,9 +8,9 @@ User=root
 StandardOutput=journal
 StandardError=journal
 # Edit this line, if needed, to specify where you installed the server
-WorkingDirectory=/root/gateway-wifi-setup
+WorkingDirectory=/home/pi/vectorx-wifi-setup
 # Edit this line, if needed, to set the correct path to node
-ExecStart=/root/gateway-wifi-setup/run.sh 
+ExecStart=/home/pi/vectorx-wifi-setup/run.sh 
 
 [Install]
 WantedBy=multi-user.target

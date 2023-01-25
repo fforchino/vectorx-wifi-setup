@@ -8,7 +8,7 @@ module.exports = {
   startGateway: 'systemctl start wire-pod',
   stopGateway: 'systemctl stop wire-pod',
   restartGateway: 'systemctl restart wire-pod',
-  stopWifiService: 'systemctl stop mozilla-gateway-wifi-setup',
+  stopWifiService: 'systemctl stop vectorx-wifi-setup',
 
   // A shell command that outputs the string "COMPLETED" if we are
   // connected to a wifi network and outputs something else otherwise
