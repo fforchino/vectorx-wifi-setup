@@ -114,6 +114,7 @@ function scan(numAttempts) {
  * to the network.
  */
 function startAP(ip) {
+  console.log(ip);
   return run(platform.startAP, {IP: ip});
 }
 
