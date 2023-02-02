@@ -6,8 +6,11 @@ module.exports = {
   // ip to be used by the AP
   ap_ip: '192.168.220.1',
   startGateway: 'systemctl start wire-pod',
+  startGateway2: 'systemctl start vectorx-web',
   stopGateway: 'systemctl stop wire-pod',
+  stopGateway2: 'systemctl stop vectorx-web',
   restartGateway: 'systemctl restart wire-pod',
+  restartGateway2: 'systemctl restart vectorx-web',
   stopWifiService: 'systemctl stop vectorx-wifi-setup',
 
   // A shell command that outputs the string "COMPLETED" if we are

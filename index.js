@@ -20,6 +20,7 @@ Handlebars.registerHelper('escapeQuotes', function(str) {
 if (fs.existsSync('wifiskip')) {
   console.log('start the gateway');
   startGateway();
+  startGateway2();
   console.log('stop wifi setup');
   stopWifiService();
   return;
@@ -38,6 +39,7 @@ wifi.getStatus()
       .then(() => {
         console.log('start the gateway');
         startGateway();
+        startGateway2();
         console.log('stop wifi setup');
         stopWifiService();
       })
@@ -51,6 +53,7 @@ wifi.getStatus()
                   'and then shutdown the wifi service..');
     console.log('start the gateway');
     startGateway();
+    startGateway2();
     console.log('stop wifi setup');
     stopWifiService();
   });
@@ -200,6 +203,7 @@ function handleConnecting(request, response) {
       .then(() => {
         console.log('skip wifi setup. start the gateway');
         startGateway();
+        startGateway2();
         console.log('stop wifi setup');
         stopWifiService();
       });
@@ -245,6 +249,7 @@ function handleConnecting(request, response) {
     .then(() => {
       console.log('start the gateway');
       startGateway();
+      startGateway2();
       console.log('stop wifi setup');
       stopWifiService();
     })
@@ -255,8 +260,14 @@ function handleConnecting(request, response) {
 
 function startGateway() {
   return run(platform.startGateway)
-    .then((out) => console.log('Gateway started', out))
-    .catch((err) => console.error('Error starting Gateway:', err));
+    .then((out) => console.log('Wire-Pod started', out))
+    .catch((err) => console.error('Error starting Wire-Pod:', err));
+}
+
+function startGateway2() {
+  return run(platform.startGateway2)
+      .then((out) => console.log('VectorX Web Server started', out))
+      .catch((err) => console.error('Error starting VectorX Web Server:', err));
 }
 
 function stopWifiService() {
